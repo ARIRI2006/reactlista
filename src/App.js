@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Formulario from './Formulario';
+import RelogioComMensagem from './RelogioComMensagem';
+import Fatorial from './Fatorial';
+import ToDoList from './ToDoList';
+import Login from './Login';
+import { AuthProvider } from './AuthContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <div>
+        <h1>Aplicações React</h1>
+        <h2>Exercício 1: Formulário</h2>
+        <Formulario />
+        <h2>Exercício 2: Relógio com Mensagem</h2>
+        <RelogioComMensagem />
+        <h2>Exercício 3: Fatorial</h2>
+        <Fatorial />
+        <h2>Exercício 4: Lista de Tarefas</h2>
+        <ToDoList />
+        <h2>Exercício 5: Login</h2>
+        <Login />
+      </div>
+    </AuthProvider>
   );
 }
 
